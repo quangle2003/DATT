@@ -1,0 +1,17 @@
+<app-header></app-header>
+<app-banner></app-banner>
+<div class="card">
+  <div *ngFor="let product of products" class="card-new">
+    <nz-card nzHoverable style=" width:240px" [nzCover]="coverTemplate">
+      <nz-card-meta nzTitle="{{product.name}}" routerLink="products/{{product.id}}"></nz-card-meta>
+      <h4 class="price">{{product.price}} đ</h4>
+      <button nz-button class="add" (click)="addToCart(product)"><a href="">Add To Card</a></button>
+    </nz-card>
+    <ng-template #coverTemplate>
+      <img alt="example" src="{{product.img}}" routerLink="products/{{product.id}}"/>
+    </ng-template>
+  </div>
+</div>
+<!-- <div class="footer">
+  <app-footer></app-footer>
+</div> -->

@@ -1,0 +1,8 @@
+.page-title { width:100%; overflow:hidden; margin:0; }
+.page-title h1,
+.page-title h2 { margin:0; font-size:19px;color: #ea7696;text-transform: uppercase; }
+.page-title .separator { margin:0 3px; }
+.page-title .link-rss { float:right; margin:7px 0 0; }
+.page .std .main-container.col1-layout{
+    margin-top: 0px;
+}

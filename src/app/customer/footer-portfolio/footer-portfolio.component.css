@@ -1,0 +1,6 @@
+.custom-container {
+    @apply max-w-4xl mx-auto px-5
+}
+ .footer--thumb {
+     @apply flex flex-row-reverse flex-nowrap content-center justify-center
+ }

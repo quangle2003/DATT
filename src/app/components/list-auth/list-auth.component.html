@@ -1,0 +1,25 @@
+<nz-table #basicTable [nzData]="user">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Role</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of basicTable.data; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.password}}</td>
+            <td>{{user.role? "admin": "user"}}</td>
+            <td>
+                <a routerLink="edit/{{user.id}}" nz-button nzType="link">Edit</a>
+                <button nz-button nzType="primary" (click)="onHandleRemove(user.id!)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

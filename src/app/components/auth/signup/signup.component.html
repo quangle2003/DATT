@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="form">
+    <h1 style="text-align: center;">Register</h1>
+    <form nz-form class="login-form" (ngSubmit)="onSubmit()">
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your username!">
+                <label for="">Username</label>
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input [(ngModel)]="auth.username" name="username" placeholder="Username" />
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Email!">
+                <label for="">Email</label>
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="email" nz-input [(ngModel)]="auth.email" name="email" placeholder="Email" />
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control nzErrorTip="Please input your Password!">
+                <label for="">Password</label>
+                <nz-input-group nzPrefixIcon="lock">
+                    <input type="password" nz-input [(ngModel)]="auth.password" name="password"
+                        placeholder="Password" />
+                </nz-input-group>
+            </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Signup</button>
+    </form>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,38 @@
+<form #addProduct="ngForm" nz-form class="login-form" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Name</label><br>
+            <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input [(ngModel)]="user.username" name="username" #username="ngModel" placeholder="Name"
+                    required minlength="5" />
+            </nz-input-group>
+            <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert">
+                <div *ngIf="username.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="username.errors?.['minlength']">
+                    Minlength 5
+                </div>
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Email</label><br>
+            <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input [(ngModel)]="user.email" name="name" #name="ngModel" placeholder="Email"
+                    required minlength="5" />
+            </nz-input-group>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+                <div *ngIf="name.errors?.['required']">
+                    Email is required.
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                    Minlength 5
+                </div>
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'"
+        [disabled]="!addProduct.valid">Update</button>
+</form>

@@ -1,0 +1,19 @@
+<app-breadcrumb></app-breadcrumb>
+<section class="recent-post">
+    <div class="custom-container">
+        <div class="">
+            <h1 class="text-[30px] font-bold ">Blog</h1>
+        </div>
+
+        <div class="recent-post__item" *ngFor="let blog of blogs , let i = index">
+            <h1 class="recent-post__title"><a routerLink="/portfolio/blog/{{blog.id}}"
+                    class="text-black">{{blog.title}}</a></h1>
+            <div class="recent-post__meta">
+                <span class="text-[18] font-[500]">12 Feb 2019</span>
+                <span>|</span>
+                <a href="" class="text-[18] text-[#8695A4]">{{blog.category}}</a>
+            </div>
+            <p class="recent-post__desc">{{blog.subTitle}}</p>
+        </div>
+    </div>
+</section>

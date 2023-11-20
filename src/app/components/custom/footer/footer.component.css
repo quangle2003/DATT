@@ -1,0 +1,39 @@
+.foot{
+    background: #333333;
+    padding: 50px 0;
+    margin-top: 50px;
+}
+.foot-new{
+    max-width: 1150px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.foot-new h1{
+    color: white;
+}
+.menu{
+    padding: 0;
+}
+.menu li{
+    list-style: none;
+    padding: 10px 0;
+}
+.menu li a{
+    color: white;
+}
+.menu li a:hover{
+    color:#c89979 ;
+}
+.foot-btm{
+    max-width: 1150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding-top: 10px;
+}
+.foot-b{
+    border-top: 1px solid gray;
+}

@@ -1,0 +1,21 @@
+.card{
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 100px;
+
+}
+app-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+}
+app-post{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+.post{
+    max-width: 1150px;
+    margin: 0 auto;
+    margin-top: 100px;
+}

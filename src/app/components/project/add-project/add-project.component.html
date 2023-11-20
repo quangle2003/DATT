@@ -1,0 +1,80 @@
+<div class="form">
+    <h1 style="text-align: center;">Add Project</h1>
+    <form nz-form #formProject="ngForm" class="login-form" (ngSubmit)="onSubmit(formProject)">
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Title</label><br>
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input nzSize="large" name="title" placeholder="Title" ngModel #title="ngModel"
+                        required />
+                </nz-input-group>
+                <div *ngIf="title.invalid && (title.dirty || title.touched)">
+                    <span *ngIf="title.errors?.['required']" style="color: red;">
+                        Title is required!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Img</label><br />
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input nzSize="large" name="img" placeholder="Image" ngModel #img="ngModel"
+                        required />
+                </nz-input-group>
+                <div *ngIf="img.invalid && (img.dirty || img.touched)">
+                    <span *ngIf="img.errors?.['required']" style="color: red;">
+                        Image is required!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Year</label><br />
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input nzSize="large" name="year" placeholder="Image" ngModel #year="ngModel"
+                        required />
+                </nz-input-group>
+                <div *ngIf="year.invalid && (year.dirty || year.touched)">
+                    <span *ngIf="year.errors?.['required']" style="color: red;">
+                        Year is required!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Category</label><br />
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input nzSize="large" name="category" placeholder="Image" ngModel
+                        #category="ngModel" required />
+                </nz-input-group>
+                <div *ngIf="category.invalid && (category.dirty || category.touched)">
+                    <span *ngIf="category.errors?.['required']" style="color: red;">
+                        Category is required!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Description</label><br />
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="text" nz-input nzSize="large" name="desc" placeholder="Image" ngModel #desc="ngModel"
+                        required />
+                </nz-input-group>
+                <div *ngIf="desc.invalid && (desc.dirty || desc.touched)">
+                    <span *ngIf="img.errors?.['required']" style="color: red;">
+                        Description is required!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">Add</button>
+    </form>
+</div>

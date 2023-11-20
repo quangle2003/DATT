@@ -1,0 +1,36 @@
+.banner{
+    background-position: 78% 0%;
+    height: 600px;
+}
+.text{
+    color: black;
+    width: 750px;
+    height: 280px;
+    padding-top: 200px;
+    padding-left: 200px;
+    & h4{
+        color: black;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    & h1{
+        font-size: 50px;
+        color: black;
+        font-weight: 700;
+    }
+    & p{
+        font-size: 15px;
+        font-weight: 700;
+    }
+    & a{
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 25px;
+        color: black;
+        font-size: 20px;
+        font-weight: 700;
+    }
+    & a:hover{
+        background: #c89979;
+    }
+}

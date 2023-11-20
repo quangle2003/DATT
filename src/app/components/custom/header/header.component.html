@@ -1,0 +1,64 @@
+<div class="header">
+    <div class="header-top">
+        <div>
+            <ul nz-menu nzMode="horizontal" nzTheme="dark">
+                <li nz-menu-item>
+                    <i nz-icon nzType="aim"></i>
+                    319 - C16 Lý Thường Kiệt, P.15, Q.11, Tp.HCM
+                </li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="phone"></i>
+                    <a href="tel:0372011308" style="color: white;"> 037 201 1308</a>
+                </li>
+            </ul>
+        </div>
+        <div></div>
+        <div>
+            <ul nz-menu nzMode="horizontal" nzTheme="dark">
+                <li nz-menu-item>
+                    <i nz-icon nzType="facebook" nzTheme="outline"></i>
+                </li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="instagram" nzTheme="outline"></i>
+                </li>
+                <li nz-menu-item>
+                    <i nz-icon nzType="twitter" nzTheme="outline"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main">
+        <div>
+            <a href="">
+                <img src="http://mauweb.monamedia.net/donghohaitrieu/wp-content/uploads/2019/07/logo-mona-2.png" alt=""
+                    width="200" height="67px">
+            </a>
+        </div>
+        <div>
+            <div class="">
+                <input type="text" [(ngModel)]="searchTerm" class="search" name="s" value="" placeholder="Tìm kiếm…">
+                <button class="s" (click)="search()"><i nz-icon nzType="search" nzTheme="outline"></i></button>
+            </div>
+            <div *ngFor="let product of filteredProducts" class="card-new">
+                <nz-card nzHoverable style=" width:140px" [nzCover]="coverTemplate">
+                    <nz-card-meta nzTitle="{{product.name}}" routerLink="products/{{product.id}}"></nz-card-meta>
+                </nz-card>
+                <ng-template #coverTemplate>
+                    <img alt="example" src="{{product.img}}" />
+                </ng-template>
+            </div>
+        </div>
+        <div>
+            <a href="" class="icon"><i nz-icon nzType="heart" nzTheme="outline"></i></a>
+            <a href="/cart" class="icon"><i nz-icon nzType="shopping" nzTheme="outline"></i></a>
+            <a href="/user" class="icon"><i nz-icon nzType="user" nzTheme="outline"></i></a>
+        </div>
+    </div>
+    <ul nz-menu nzMode="horizontal" class="menu">
+        <li nz-menu-item><a href="/">TRANG CHỦ</a></li>
+        <li nz-menu-item><a href="/intro">GIỚI THIỆU</a></li>
+        <li nz-menu-item><a href="/filter">SẢN PHẨM</a></li>
+        <li nz-menu-item><a href="/portfolio/blog">BLOG</a></li>
+        <li nz-menu-item><a href="/portfolio/contact">LIÊN HỆ</a></li>
+    </ul>
+</div>

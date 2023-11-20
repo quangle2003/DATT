@@ -1,0 +1,28 @@
+<section class="project">
+    <div class="custom-container">
+        <div class="section-header">
+            <h2 class="section-header__title">
+                Featured works
+            </h2>
+        </div>
+        <div class="section-body" *ngFor="let project of projects , let i=index ">
+            <div class="project__item grid md:grid-cols-[246px,auto] gap-4">
+                <div class="project__img">
+                    <a href="/portfolio/project/{{project.id}}"><img src="{{project.img}}" alt=""
+                            class="project__thumb"></a>
+                </div>
+                <div class="project__content">
+                    <a href="/portfolio/project/{{project.id}}">
+                        <h3 class="project__name">{{project.title}}</h3>
+                    </a>
+                    <div class="project__meta">
+                        <span class="project__create">{{project.year}}</span>
+                        <a routerLink="/portfolio/category/{{project.id}}"
+                            class="project__category">{{project.category}}</a>
+                    </div>
+                    <p class="project__desc">{{project.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

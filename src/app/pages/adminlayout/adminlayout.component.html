@@ -1,0 +1,47 @@
+<nz-layout>
+    <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+        <div class="logo"></div>
+        <ul nz-menu nzTheme="dark" nzMode="inline">
+            <li nz-submenu nzTitle="Products" nzIcon="inbox">
+                <ul>
+                    <li nz-menu-item><a routerLink="/admin/products">List</a></li>
+                    <li nz-menu-item><a routerLink="/admin/products/add"></a>Add</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Auth" nzIcon="user">
+                <ul>
+                    <li nz-menu-item><a routerLink="/admin/auth">List</a></li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Post" nzIcon="form">
+                <ul>
+                    <li nz-menu-item><a routerLink="/admin/post"></a>List</li>
+                    <li nz-menu-item><a routerLink="/admin/post/add"></a>Add</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Project" nzIcon="project">
+                <ul>
+                    <li nz-menu-item><a routerLink="/admin/project"></a>List</li>
+                    <li nz-menu-item><a routerLink="/admin/project/add"></a>Add</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Category" nzIcon="form">
+                <ul>
+                    <li nz-menu-item><a routerLink="/admin/category"></a>List</li>
+                    <li nz-menu-item><a routerLink="/admin/category/add"></a>Add</li>
+                </ul>
+            </li>
+        </ul>
+    </nz-sider>
+    <nz-layout>
+        <nz-header>
+            <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+                (click)="isCollapsed = !isCollapsed"></i>
+        </nz-header>
+        <nz-content>
+
+            <router-outlet></router-outlet>
+        </nz-content>
+        <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+    </nz-layout>
+</nz-layout>

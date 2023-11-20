@@ -1,0 +1,17 @@
+.login-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.login-form-margin {
+    margin-bottom: 16px;
+}
+
+
+.login-form-button {
+    width: 30%;
+    margin: 0 auto;
+}
+nz-input-group input{
+   padding: 5px 200px 5px 5px;
+}

@@ -1,0 +1,88 @@
+<form #addProduct="ngForm" nz-form class="login-form" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Name</label><br>
+            <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input [(ngModel)]="product.name" name="name" #name="ngModel" placeholder="Name"
+                    required minlength="5" />
+            </nz-input-group>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+                <div *ngIf="name.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                    Minlength 5
+                </div>
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Price</label><br>
+            <nz-input-group nzPrefixIcon="lock">
+                <input type="text" nz-input [(ngModel)]="product.price" name="price" #price="ngModel"
+                    placeholder="Price" required />
+            </nz-input-group>
+            <div *ngIf="price.invalid && (price.dirty || price.touched)" class="alert">
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Sale</label><br>
+            <nz-input-group nzPrefixIcon="lock">
+                <input type="text" nz-input [(ngModel)]="product.sale" name="sale" #price="ngModel"
+                    placeholder="Sale" required />
+            </nz-input-group>
+            <div *ngIf="price.invalid && (price.dirty || price.touched)" class="alert">
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Description</label><br>
+            <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input [(ngModel)]="product.description" name="description" #name="ngModel" placeholder="Description"
+                    required minlength="5" />
+            </nz-input-group>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+                <div *ngIf="name.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                    Minlength 5
+                </div>
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control>
+            <label for="name">Author</label><br>
+            <nz-input-group nzPrefixIcon="user">
+                <input type="text" nz-input [(ngModel)]="product.author" name="author" #name="ngModel" placeholder="Author"
+                    required minlength="5" />
+            </nz-input-group>
+            <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+                <div *ngIf="name.errors?.['required']">
+                    Name is required.
+                </div>
+                <div *ngIf="name.errors?.['minlength']">
+                    Minlength 5
+                </div>
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-control nzErrorTip="Please input your img!">
+            <label for="name">Image</label><br>
+            <nz-input-group nzPrefixIcon="lock">
+                <input type="text" nz-input [(ngModel)]="product.img" name="img" #img="ngModel" placeholder="Img"
+                    required />
+            </nz-input-group>
+            <div *ngIf="img.invalid && (img.dirty || img.touched)" class="alert">
+            </div>
+        </nz-form-control>
+    </nz-form-item>
+    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'"
+        [disabled]="!addProduct.valid">Add</button>
+</form>

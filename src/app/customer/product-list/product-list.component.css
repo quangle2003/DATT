@@ -1,0 +1,29 @@
+.card-new{
+    text-align: center;
+    border: 1px solid #80808092;
+    float: left;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.add{
+    border: none;
+    padding: 5px 20px;
+    background: #c89979;
+}
+.add:hover{
+    background: #a27050;
+}
+.add a{
+    color: white;
+}
+.price{
+    margin: 10px;
+    color: #a27050;
+}
+.card{
+    max-width: 1400px;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+    /* display: flex; */
+}

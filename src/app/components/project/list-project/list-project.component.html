@@ -1,0 +1,28 @@
+<a href="" nz-button nzType="primary" routerLink="/admin/project/add">Add</a>
+<nz-table #basicTable [nzData]="projects">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>Year</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of basicTable.data; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{project.title}}</td>
+            <td><img src="{{project.img}}" alt=""></td>
+            <td>{{project.year}}</td>
+            <td>{{project.category}}</td>
+            <td>{{project.desc}}</td>
+            <td>
+                <a routerLink="edit/{{project.id}}" nz-button nzType="link">Edit</a>
+                <button nz-button nzType="primary" (click)="onHandleRemove(project.id!)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</nz-table>

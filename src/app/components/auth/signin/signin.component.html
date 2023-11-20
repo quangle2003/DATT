@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="form">
+    <h1 style="text-align: center;">Login</h1>
+    <form nz-form #formAuth="ngForm" class="login-form" (ngSubmit)="onSubmit(formAuth)">
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Email</label>
+                <nz-input-group nzPrefixIcon="user">
+                    <input type="email" nz-input nzSize="large" name="email" placeholder="Email" ngModel
+                        #email="ngModel" required email />
+                </nz-input-group>
+                <div *ngIf="email.invalid && (email.dirty || email.touched)">
+                    <span *ngIf="email.errors?.['required']" style="color: red;">
+                        Email is required!
+                    </span>
+                    <span *ngIf="email.errors?.['email']" style="color: red;">
+                        Email is @!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+            <nz-form-control>
+                <label for="">Password</label>
+                <nz-input-group nzPrefixIcon="lock">
+                    <input type="password" nz-input nzSize="large" name="password" placeholder="Password" ngModel
+                        #password="ngModel" required />
+                </nz-input-group>
+                <div *ngIf="password.invalid && (password.dirty || password.touched)">
+                    <span *ngIf="password.errors?.['required']" style="color: red;">
+                        Password is required!
+                    </span>
+                </div>
+            </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">SignIn</button>
+    </form>
+</div>
+<app-footer></app-footer>

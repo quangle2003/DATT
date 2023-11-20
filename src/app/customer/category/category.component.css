@@ -1,0 +1,36 @@
+.custom-container {
+    @apply max-w-4xl mx-auto px-5
+}
+
+/**/
+.project__item {
+    @apply border-b py-5
+}
+
+.project__img {
+    @apply shadow-lg
+}
+
+.project__thumb {
+    @apply rounded w-full
+}
+
+.project__name {
+    @apply text-[30px] font-bold
+}
+
+.project__meta {
+    @apply flex space-x-4 py-5
+}
+
+.project__create {
+    @apply inline-block bg-black rounded-full text-white px-2
+}
+
+.project__category {
+    @apply text-[#8695A4];
+}
+
+.project__desc {
+    @apply text-[16px] font-[500]
+}

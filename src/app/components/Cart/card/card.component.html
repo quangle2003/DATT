@@ -1,0 +1,13 @@
+<div *ngFor="let product of products" class="card-new">
+    <nz-card nzHoverable style=" width:240px" [nzCover]="coverTemplate">
+        <nz-card-meta nzTitle="{{product.name}}" routerLink="products/{{product.id}}"></nz-card-meta>
+        <p class="inline-block text-2xl font-semibold text-gray-700 dark:text-gray-400 ">
+            <span>{{ product.price }}</span>
+            <span class="ml-3 text-base font-normal text-gray-500 line-through dark:text-gray-400">{{ product.sale }}</span>
+        </p>
+        <button nz-button class="add" (click)="addToCart(product)"><a href="">Add To Card</a></button>
+    </nz-card>
+    <ng-template #coverTemplate>
+        <img alt="example" src="{{product.img}}" routerLink="products/{{product.id}}"/>
+    </ng-template>
+</div>

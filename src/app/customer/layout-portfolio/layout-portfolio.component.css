@@ -1,0 +1,6 @@
+.custom-container {
+    @apply max-w-4xl mx-auto px-5
+}
+ body{
+@apply text-[#21243D];
+ }

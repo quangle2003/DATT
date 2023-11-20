@@ -1,0 +1,76 @@
+<app-breadcrumb></app-breadcrumb>
+
+<div class="custom-container">
+    <div class="w-50">
+        <div>
+            <h2 nz-col [nzSpan]="24" class="title-form">Contact Us</h2>
+        </div>
+        <div class="subTitle">
+            <p>Find out how Adamo Software can help you and your business reach new levels of success. We would be happy
+                to discuss the possibilities at your convenience.</p>
+        </div>
+    </div>
+    <form nz-form nzLayout="vertical">
+        <div>
+        </div>
+        <div nz-row [nzGutter]="[30]">
+            <div nz-col [nzSpan]="12">
+                <nz-form-item>
+                    <nz-form-label><strong>Your name: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <input nz-input name="name" placeholder="your name" class="input-flied"
+                            formControlName="name" />
+                        <!-- BOX ERROR START -->
+
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+            <div nz-col [nzSpan]="12">
+                <nz-form-item>
+                    <nz-form-label><strong>Email: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <input nz-input name="email" placeholder="a@gmail.com" class="input-flied"
+                            formControlName="email" />
+                        <!-- BOX ERROR START -->
+
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="12">
+                <nz-form-item>
+                    <nz-form-label><strong>Number Phone: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <input nz-input name="phone" placeholder="+84 ..." class="input-flied"
+                            formControlName="phone" />
+                        <!-- BOX ERROR START -->
+
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24">
+                <nz-form-item>
+                    <nz-form-label><strong>Content: </strong></nz-form-label>
+                    <nz-form-control nzValidatingTip="Validating...">
+                        <textarea nz-input name="content" placeholder="...." class="input-flied area-flied"
+                            formControlName="content"></textarea>
+                        <!-- BOX ERROR START -->
+
+                        <!-- BOX ERROR END -->
+                    </nz-form-control>
+                </nz-form-item>
+            </div>
+
+            <div nz-col [nzSpan]="24">
+                <nz-form-item class="d-flex justify-end" nz-col [nzSpan]="3">
+                    <button class="px-10" nz-button nzType="primary">Submit</button>
+                </nz-form-item>
+            </div>
+        </div>
+    </form>
+
+</div>
